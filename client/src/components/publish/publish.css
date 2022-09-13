@@ -1,0 +1,50 @@
+h2{
+    float:right
+}
+#main{
+    height:100%;
+    width:100%;
+    border: 2px solid black;
+}
+aside{
+    position: absolute;
+    top:80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    
+    height: 610px;
+    width: 300px;
+    border: 5px solid black;
+}
+textarea{
+    position: absolute;
+    left: 350px;
+    top: 80px;
+}
+#publish{
+    position: absolute;
+    left: 350px;
+    top: 80px;
+    height: 450px;
+    width: 1150px;
+}
+#under{
+    position: absolute;
+    top: 565px;
+    left: 350px;
+    /* border: 1px solid grey; */
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    height: 30px;
+    width: 1180px;
+}
+.under-span{
+    margin: 20px;
+
+}
+/* Link{
+    font-style: none;
+} */

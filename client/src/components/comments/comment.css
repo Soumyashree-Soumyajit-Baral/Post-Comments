@@ -1,0 +1,60 @@
+h2{
+    float:right
+}
+#main{
+    height:100%;
+    width:100%;
+    border: 2px solid black;
+}
+aside{
+    position: absolute;
+    top:80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    
+    height: 610px;
+    width: 300px;
+    border: 5px solid black;
+}
+
+.overflow{
+    position: absolute;
+    left: 350px;
+    top: 80px;
+    height: 250px;
+    width: 1150px;
+    border:1px solid black;
+    overflow: hidden;
+}
+#under1{
+    position: absolute;
+    top: 365px;
+    left: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    height: 30px;
+    width: 1180px;
+}
+.under-span{
+    margin: 20px;
+
+}
+#ifeild{
+    position: absolute;
+    top: 420px;
+    left: 800px;
+    width:900px;
+    height:30px;
+}
+.underflow{
+    position: absolute;
+    left: 350px;
+    top: 450px;
+    height: 240px;
+    width: 1150px;
+    border:1px solid black;
+    overflow: hidden;
+}
