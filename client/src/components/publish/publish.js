@@ -7,7 +7,7 @@ import "./publish.css"
 
 const Publish = () => {
     const [input, setInput] = useState("");
-    // const navigate=useNavigate()
+    
     const handleInput = (e) => {
         setInput(e.target.value)
     }
@@ -21,7 +21,7 @@ const Publish = () => {
             data: { publish: input }
         }).then((res) => {
             console.log(res);
-            // navigate("/publish")
+            
         }).catch((err) => {
             alert("error while publish");
         });
@@ -39,7 +39,7 @@ const Publish = () => {
                     </div>
 
                 </header>
-                {/* <hr></hr> */}
+                
                 <aside>
                     <Link to="/publish">Publish Content</Link><br></br>
                     <Link to="/comment">Comments</Link><br></br>
@@ -47,7 +47,7 @@ const Publish = () => {
                 </aside>
                 <section>
                     <div>
-                        {/* <input name="publish" id="publish"  value={input} onChange={handleInput}></input> */}
+                        
                         <textarea name="publish" id="address" cols="158" rows="30" value={input} onChange={handleInput}></textarea>
                     </div>
                     <div id="under">

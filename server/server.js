@@ -105,8 +105,6 @@ app.post("/signup", async (req, res) => {
   })
   
   app.get("/publish",(req,res)=>{
-    // const user=req.mailid
-    // console.log(user)
     pubModel.find().sort({_id:-1}).then((data)=>{
         res.status(200).send(data)
     }).catch((err)=>{
@@ -133,13 +131,3 @@ app.post("/signup", async (req, res) => {
         res.status(400).send(err);
     })
   })
-//   app.get("/", async (req, res) => {
-//     try {
-//       const user = req.mailid;
-//       const data = await usercontact.find({ user });
-//       const contactsdata = data.map((d) => d.contacts);
-//       res.status(200).send(...contactsdata);
-//     } catch {
-//       res.status(400).send("An error occured while getting data");
-//     }
-//   });

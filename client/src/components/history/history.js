@@ -7,15 +7,8 @@ import "./history.css"
 
 const History = () => {
     const [list, setList] = useState([]);
-    // const [posts, setPosts] = useState([]);
-    // const navigate=useNavigate()
-    // // const navigate=useNavigate()
-    // const handleClick = () => {
-    //     navigate("/publish")
-    // }
     useEffect(() => {
         let token = localStorage.getItem("Authorization");
-        // console.log(input)
         axios({
             url: "http://localhost:5000/comment",
             method: "GET",
@@ -49,8 +42,6 @@ const History = () => {
             </aside>
             <section>
                 <div className="overflow1">
-                    {/* <input name="publish" id="publish"  value={input} onChange={handleInput}></input> */}
-                    {/* <textarea name="publish" id="address" cols="158" rows="30" value={input} onChange={handleInput}></textarea> */}
                     {list.map((k)=>{
                         return(
                             <div>

@@ -10,7 +10,6 @@ const Logout = () => {
   return (
     <>
       <div className="box-logout">
-        {/* <img src="logout.png" alt=""></img> */}
         <p onClick={handleLogout}>Log-out</p>
       </div>
     </>

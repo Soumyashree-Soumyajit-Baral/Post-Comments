@@ -14,7 +14,6 @@ const Landing = () => {
     }
     useEffect(() => {
         let token = localStorage.getItem("Authorization");
-        // console.log(input)
         axios({
             url: "http://localhost:5000/publish",
             method: "GET",
@@ -22,7 +21,7 @@ const Landing = () => {
         }).then((res) => {
             console.log(res);
             setPosts(res.data)
-            // navigate("/publish")
+            
         }).catch((err) => {
             alert("error while publish");
         });
@@ -40,7 +39,7 @@ const Landing = () => {
                 </div>
 
             </header>
-            {/* <hr></hr> */}
+            
             <aside>
                 <Link to="/publish">Publish Content</Link><br></br>
                 <Link to="/comment">Comments</Link><br></br>
@@ -48,8 +47,6 @@ const Landing = () => {
             </aside>
             <section>
                 <div className="overflow5">
-                    {/* <input name="publish" id="publish"  value={input} onChange={handleInput}></input> */}
-                    {/* <textarea name="publish" id="address" cols="158" rows="30" value={input} onChange={handleInput}></textarea> */}
                     {posts.map((k)=>{
                         return(
                             <div>
@@ -63,7 +60,7 @@ const Landing = () => {
                     <button className="under-spam">Edit</button>
                     <button className="under-spam">Save</button>
                     <button onClick={handleClick}>Publish</button>
-                    {/* <Link to="/publish">publish</Link> */}
+                    
                 </div>
 
             </section>

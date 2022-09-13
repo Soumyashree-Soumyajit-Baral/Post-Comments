@@ -1,9 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-// import logo from "../../assets/contactsmanager.png";
 
-// import "./signup.css";
 const Signup = () => {
   const [signupState, setSignupState] = useState({});
   const navigate = useNavigate();
@@ -30,21 +28,10 @@ const Signup = () => {
   return (
     <>
       <div className="outer-box-signup">
-        {/* <div className="ucircle-signup">
-          <img src="Ellipse-31.png" alt="group1" height={"250px"}></img>
-        </div> */}
+        
         <form>
           <div className="box-signup">
-            {/* <div>
-              <img
-                src="Group 100.png"
-                alt="group2"
-                className="rsquare-signup"
-              ></img>
-            </div> */}
-            {/* <div className="logo">
-              <img src={logo} alt=""></img>
-            </div> */}
+            
             <div className="item-signup">
               <p>Create new Account</p>
             </div>
@@ -86,18 +73,10 @@ const Signup = () => {
                 Submit
               </button>
             </div>
-            {/* <div>
-              <img
-                src="Group 100.png"
-                alt="group3"
-                className="lsquare-signup"
-              ></img>
-            </div> */}
+            
           </div>
         </form>
-        {/* <div className="lcircle-signup">
-          <img src="Ellipse-31.png" alt="group4" height={"250px"}></img>
-        </div> */}
+        
       </div>
     </>
   );

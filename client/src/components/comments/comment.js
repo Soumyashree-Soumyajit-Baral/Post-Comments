@@ -8,27 +8,14 @@ import "./comment.css"
 const Comment = () => {
     const [input, setInput] = useState("")
     const [list, setList] = useState([]);
-    // const handleList = (e) => {
-    //     if (!input) {
-
-    //     } else {
-    //         setList([...list, input]);
-    //         setInput("")
-    //     }
-
-    // }
+    
     const handleInput = (e) => {
         setInput(e.target.value)
     }
     const [posts, setPosts] = useState([]);
-    // const navigate=useNavigate()
-    // const navigate=useNavigate()
-    // const handleClick = () => {
-    //     navigate("/publish")
-    // }
+    
     useEffect(() => {
         let token = localStorage.getItem("Authorization");
-        // console.log(input)
         axios({
             url: "http://localhost:5000/publish",
             method: "GET",
@@ -36,7 +23,7 @@ const Comment = () => {
         }).then((res) => {
             console.log(res);
             setPosts(res.data)
-            // navigate("/publish")
+            
         }).catch((err) => {
             alert("error while publish");
         });
@@ -44,7 +31,6 @@ const Comment = () => {
     })
     useEffect(() => {
         let token = localStorage.getItem("Authorization");
-        // console.log(input)
         axios({
             url: "http://localhost:5000/comment",
             method: "GET",
@@ -52,7 +38,6 @@ const Comment = () => {
         }).then((res) => {
             console.log(res);
             setList(res.data)
-            // navigate("/publish")
         }).catch((err) => {
             alert("error while publish");
         });
@@ -60,7 +45,6 @@ const Comment = () => {
     })
     const handleComment = () => {
         let token = localStorage.getItem("Authorization");
-        // console.log(input)
         axios({
             url: "http://localhost:5000/comment",
             method: "POST",
@@ -68,7 +52,6 @@ const Comment = () => {
             data: { publish: input }
         }).then((res) => {
             console.log(res);
-            // navigate("/publish")
         }).catch((err) => {
             alert("error while publish");
         });
@@ -86,7 +69,6 @@ const Comment = () => {
                 </div>
 
             </header>
-            {/* <hr></hr> */}
             <aside>
                 <Link to="/publish">Publish Content</Link><br></br>
                 <Link to="/comment">Comments</Link><br></br>
@@ -94,8 +76,6 @@ const Comment = () => {
             </aside>
             <section>
                 <div className="overflow">
-                    {/* <input name="publish" id="publish"  value={input} onChange={handleInput}></input> */}
-                    {/* <textarea name="publish" id="address" cols="158" rows="30" value={input} onChange={handleInput}></textarea> */}
                     {posts.map((k) => {
                         return (
                             <div>
@@ -115,8 +95,6 @@ const Comment = () => {
                 </div>
                 <div>
                     <div className="underflow">
-                        {/* <input name="publish" id="publish"  value={input} onChange={handleInput}></input> */}
-                        {/* <textarea name="publish" id="address" cols="158" rows="30" value={input} onChange={handleInput}></textarea> */}
                         {list.map((d) => {
                             return (
                                 <div>
